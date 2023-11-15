@@ -3,11 +3,57 @@
 <head>
        <meta charset="UTF-8">
        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-       <title>Document</title>
+       <title>Arrays</title>
        <script defer src="./index.js"></script>
        <link rel="stylesheet" href="./styles.css">
 </head>
 <body>
+       <!--1. Header-->
+       <h1>Day 11 - Arrays</h1>
+
+       <!--2. Button that says "Generate an array with 10 random numbers between 1 and a 100!"-->
+       <!--After pressing button, list of buttons appear-->
+       <button class="randomNums">Generate an array with 10 random numbers between 1 and a 100!</button>
        
+<div id="buttonList">
+       <!--3. Make 9 buttons-->
+              <!--1st button "Display the first number!"
+                     Displays the first number in the random generated array including from the first number of any button pressed-->
+              <button class="firstNum">Display the first number!</button>
+
+              <!--2nd button "Add a random number"
+                     Adds a random number to the current generated array list including from any button pressed-->
+              <button class="addNum">Add a random number!</button>
+
+              <!--3rd "bear emoji"
+                     Changes all numbers to bears but adds a random number to current bear list, remove a number will only remove numbers not bears, fizzbuzz does not do anything, alert pops up when clicking heart button and says "Super bonus hearts can only be performed with an array of all numbers. Please reset!" (bug currently for resetting after clicking heart with full bears)-->
+              <button class="bear">🐻</button>
+
+              <!--4th "Reverse It!"
+                     Reverses all the numbers in the array-->
+              <button class="reverse">Reverse It!</button>
+
+              <!--5th "Show the highest number!"
+                     Displays only the highest number, clicking the display first number will only show the first number hidden in the array, array shows number listed with new added random number, all other buttons normal -->
+              <button class="highNum">Show the highest number!</button>
+
+              <!--6th "Fizzbuzz!" 🫧 ✨
+                     Changes random numbers into bubbles and stars, no set order or number of each, remove a number will only remove a number that is showing after fizzbuzz clicked, alert pops up to reset-->
+              <button class="fizzBuzz">Fizzbuzz!</button>
+
+              <!--7th "heart emoji"
+                     Only works with numbers, 10 phases of random # hearts will appear-->
+              <button class="heart">❤️</button>
+
+              <!--8th "Remove a number!"
+                     Removes only a number on the array including hidden, no emojis show on list-->
+              <button class="removeNum">Remove a number!</button>
+
+              <!--9th "Reset!"
+                     It resets the current screen and generates a random list of numbers, does not go back to the 1st button to generate random numbers-->
+              <button class="reset">Reset!</button>
+</div>
+
+
 </body>
 </html>
