@@ -1,0 +1,27 @@
+#randomArray {
+       font-size: 30px;
+}
+
+body {
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+     }
+
+h1 {
+       text-align: center;
+}
+
+.randomNums {
+       display: flex;
+       justify-content: center;
+}
+
+#buttonList {
+       display: flex;
+       flex-wrap: wrap;
+       gap: 5px;
+       justify-content: center;
+}
+
