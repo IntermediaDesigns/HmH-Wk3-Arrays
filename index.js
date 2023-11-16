@@ -93,32 +93,23 @@ highNumButton.addEventListener('click', highestNumber)
 // Change random numbers into bubble or stars randomly, removes a number when removeNum is clicked, and alert pops up if there is a bear in the array saying "Can only be performed with an array of all numbers. Please reset!"
 const fizzBuzzButton = document.querySelector('.fizzBuzz')
 
-let fizzBuzzClicked = false
-
-function changeRandomNumbers () {
-  if (fizzBuzzClicked) {
-    return
-  }
-
-  let symbols = ['🫧', '✨']
-  let bearExists = randomNumbers.includes('🐻')
-
-  if (bearExists) {
-    alert('Can you MAFF!?! Only divisble by 3 or 5 🤓.')
-    return
-  }
-
-  for (let i = 0; i < randomNumbers.length; i++) {
-    if (Math.random() < 0.2) {
-      randomNumbers[i] = symbols[Math.floor(Math.random() * symbols.length)]
-    }
-  }
-  randomArrayP.textContent = `[ ${randomNumbers.join(', ')} ]`
-  updateDropdown()
-  fizzBuzzClicked = true
-}
-
-fizzBuzzButton.addEventListener('click', changeRandomNumbers)
+fizzBuzzButton.addEventListener("click", () => {
+       let output = [];
+       for (let num of randomNumbers) {
+         if (num % 3 === 0 && num % 5 === 0) {
+           output.push("🫧✨");
+         } else if (num % 3 === 0) {
+           output.push("🫧");
+         } else if (num % 5 === 0) {
+           output.push("✨");
+         } else {
+           output.push(num);
+         }
+       }
+       randomNumbers = output;
+       randomArrayP.textContent = `[ ${randomNumbers.join(', ')} ]`;
+       updateDropdown();
+     });
 
 //10 timed phases of random amount of hearts appear while array is showing
 const heartButton = document.querySelector('.heart')
