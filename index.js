@@ -80,12 +80,22 @@ reverseButton.addEventListener('click', reverseNumbers)
 // Show the highest number from the array
 const highNumButton = document.querySelector('.highNum')
 
-function highestNumber () {
+/*function highestNumber () {
   let highest = Math.max(
     ...randomNumbers.filter(num => typeof num === 'number')
   )
   randomArrayP.textContent = `[ ${highest} ]`
   updateDropdown()
+}*/
+function highestNumber () {
+  let numbers = randomNumbers.filter(num => typeof num === 'number');
+  if (numbers.length === 0) {
+    randomArrayP.textContent = "No number found in array.";
+  } else {
+    let highest = Math.max(...numbers);
+    randomArrayP.textContent = `[ ${highest} ]`;
+  }
+  updateDropdown();
 }
 
 highNumButton.addEventListener('click', highestNumber)
