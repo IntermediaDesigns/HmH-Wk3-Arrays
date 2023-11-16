@@ -104,7 +104,7 @@ function changeRandomNumbers () {
   let bearExists = randomNumbers.includes('🐻')
 
   if (bearExists) {
-    alert('Can only be performed with an array of all numbers. Please reset!')
+    alert('Can you MAFF!?! Only divisble by 3 or 5 🤓.')
     return
   }
 
