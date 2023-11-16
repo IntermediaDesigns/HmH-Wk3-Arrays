@@ -80,22 +80,15 @@ reverseButton.addEventListener('click', reverseNumbers)
 // Show the highest number from the array
 const highNumButton = document.querySelector('.highNum')
 
-/*function highestNumber () {
-  let highest = Math.max(
-    ...randomNumbers.filter(num => typeof num === 'number')
-  )
-  randomArrayP.textContent = `[ ${highest} ]`
-  updateDropdown()
-}*/
 function highestNumber () {
-  let numbers = randomNumbers.filter(num => typeof num === 'number');
+  let numbers = randomNumbers.filter(num => typeof num === 'number')
   if (numbers.length === 0) {
-    randomArrayP.textContent = "No number found in array.";
+    randomArrayP.textContent = 'No number found in array.'
   } else {
-    let highest = Math.max(...numbers);
-    randomArrayP.textContent = `[ ${highest} ]`;
+    let highest = Math.max(...numbers)
+    randomArrayP.textContent = `[ ${highest} ]`
   }
-  updateDropdown();
+  updateDropdown()
 }
 
 highNumButton.addEventListener('click', highestNumber)
@@ -103,23 +96,23 @@ highNumButton.addEventListener('click', highestNumber)
 // Change random numbers into bubble or stars randomly, removes a number when removeNum is clicked, and alert pops up if there is a bear in the array saying "Can only be performed with an array of all numbers. Please reset!"
 const fizzBuzzButton = document.querySelector('.fizzBuzz')
 
-fizzBuzzButton.addEventListener("click", () => {
-       let output = [];
-       for (let num of randomNumbers) {
-         if (num % 3 === 0 && num % 5 === 0) {
-           output.push("🫧✨");
-         } else if (num % 3 === 0) {
-           output.push("🫧");
-         } else if (num % 5 === 0) {
-           output.push("✨");
-         } else {
-           output.push(num);
-         }
-       }
-       randomNumbers = output;
-       randomArrayP.textContent = `[ ${randomNumbers.join(', ')} ]`;
-       updateDropdown();
-     });
+fizzBuzzButton.addEventListener('click', () => {
+  let output = []
+  for (let num of randomNumbers) {
+    if (num % 3 === 0 && num % 5 === 0) {
+      output.push('🫧✨')
+    } else if (num % 3 === 0) {
+      output.push('🫧')
+    } else if (num % 5 === 0) {
+      output.push('✨')
+    } else {
+      output.push(num)
+    }
+  }
+  randomNumbers = output
+  randomArrayP.textContent = `[ ${randomNumbers.join(', ')} ]`
+  updateDropdown()
+})
 
 //10 timed phases of random amount of hearts appear while array is showing
 const heartButton = document.querySelector('.heart')
